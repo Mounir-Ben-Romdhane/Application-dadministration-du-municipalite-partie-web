@@ -1,0 +1,37 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">tous les demandes</h6>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Champ1</th>
+                    <th>Champ2</th>
+                    <th>Champ3</th>
+                    <th>Champ4</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item1 of listdemandes ">
+                    <!--<td>{{ item1.id }}
+                        <div class="example-container"  *ngFor="let item of  utilisateurs ">
+                                
+                           <td>{{ item.Uid }}</td>    
+                        </div>
+                           
+                    </td>-->
+                    <td>{{ item1.champ1 }}</td>
+                    <td>{{ item1.champ2 }}</td>
+                    <td>{{ item1.champ3 }}</td>
+                    <td>{{ item1.champ4 }}</td>
+                    <td>{{ item1.email}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

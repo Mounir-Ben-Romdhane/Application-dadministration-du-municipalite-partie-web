@@ -1,0 +1,37 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button class="btn btn-primary my-3" [routerLink]="['/peoplelist']">Back</button>
+        <h6 class="m-0 font-weight-bold text-primary">Add user</h6>
+    </div>
+    <div class="card-body">
+       <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()" >
+           <div class="form-group mb-3">
+            <label for="userEmail">userEmail :</label>
+            <input type="text" name="userEmail" id="userEmail" formControlName="CIn"  class="form-control" [(ngModel)]="userEmail">
+           </div>
+           <div class="form-group mb-3">
+            <label for="userName">userName :</label>
+            <input type="text" name="userName" id="userName" class="form-control" formControlName="NAme" [(ngModel)]="userName"  >
+           </div>
+
+           <div class="form-group mb-3">
+            <label for="userNumber">userNumber :</label>
+            <input type="text" name="userNumber" id="userNumber" class="form-control" formControlName="EMail"   [(ngModel)]="userNumber" >
+        </div>
+       <div class="form-group mb-3">
+        <label for="userPassword">userPassword :</label> 
+        <input type="text" name="userPassword" id="userPassword" formControlName="pHone" class="form-control" [(ngModel)]="userPassword">
+
+        </div>
+
+ 
+           <div class="form-group">
+            <button type="submit" class="btn btn-primary" [disabled]="addUserForm.invalid">Add User</button>
+            </div>
+
+     
+          
+       
+       </form>
+    </div>
+</div>

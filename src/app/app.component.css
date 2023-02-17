@@ -1,0 +1,60 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap");
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: brown;
+  @include center;
+}
+
+.container {
+  
+    margin: 20px 0;
+  
+}
+
+  .neon-text {
+    
+    position: relative;
+    stroke-width: extra-large * 0.05;
+    font-family: "Pacifico", cursive;
+    text-transform: uppercase;
+    font-size:  extra-large;
+    color: lighten(red, 25%);
+    -webkit-text-stroke-width: stroke-width;
+    -webkit-text-stroke-color: lighten(red, 5%);
+    @include center;
+    text-shadow: 0 0 40px lighten(red, 5%), 0 0 40px lighten(red, 5%),
+      0 0 40px lighten(red, 5%);
+      @include center {
+      content: random-text;
+      z-index: -1;
+      position: absolute;
+      color: transparent;
+      -webkit-text-stroke-width: stroke-width;
+      -webkit-text-stroke-color: darken(red, 40%);
+      top: -5%;
+      left: -0.5%;
+    }
+  }
+  
+

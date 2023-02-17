@@ -1,0 +1,58 @@
+<h1>{{title}}</h1>
+<ul>
+    <li *ngFor="let item of demandes">
+
+        {{ item }}
+
+    </li>
+</ul>
+<!--<div class="container">
+    <div class="col-md-5">
+    
+    </div>
+    <div class="col-md-7">
+    <pre> {{ list | json}}</pre>
+    <button class="btn btn-primary" type="button" (click)="getUsers()">get users</button>
+    </div> 
+</div>-->
+<!--<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">tous les demandes</h6>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Champ1</th>
+                    <th>Champ2</th>
+                    <th>Champ3</th>
+                    <th>Champ4</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item1 of  listuser ">
+                    <td>{{ item1.Name }}</td>
+                    <td>{{ item1.champ1 }}</td>
+                    <td>{{ item1.champ2 }}</td>
+                    <td>{{ item1.champ3 }}</td>
+                    <td>{{ item1.champ4 }}</td>
+                    <td>
+                            
+  
+                      
+                        <div class="example-button-container">
+                            <button style="margin-right: 12%" mat-mini-fab color="warn" (click)="openDialog(item1.$key)">
+                              <mat-icon>delete</mat-icon></button>
+                              <button mat-mini-fab color="green" (click)="edit(item1.$key)" >
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                           
+                          </div>
+                           </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>-->

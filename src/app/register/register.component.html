@@ -1,0 +1,71 @@
+<div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                
+                <div class="col-lg-5 d-none d-lg-block bg-register-image bg-image" style="background-image: url('assets/image/munic.png');"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Creation un compte!</h1>
+                        </div>
+                        <form class="user" [formGroup]="registerForm" (ngSubmit)="create()">
+                            <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleName"
+                                        placeholder=" Nom"formControlName="name">
+                            </div>
+                            <div class="form-group">
+                                    <input type="String" class="form-control form-control-user" id="examplePhoneNumber"
+                                        placeholder="numéro de téléphone" formControlName="numeroTel">
+                                        <div *ngIf="getNumeroTel().touched && getNumeroTel().invalid">
+                                            <small class="text-danger" *ngIf="getNumeroTel().errors?.['required']">votre numéro est requis</small>
+                                            <small class="text-danger" *ngIf="getNumeroTel().errors?.['minLength']">Email est invalide</small>
+                                            <small class="text-danger" *ngIf="getNumeroTel().errors?.['maxLength']">Email est invalide</small>
+                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Addresse Email"formControlName="email">
+                                    <div *ngIf="getEmail().touched && getEmail().invalid">
+                                        <small class="text-danger" *ngIf="getEmail().errors?.['required']">Email est requis</small>
+                                        <small class="text-danger" *ngIf="getEmail().errors?.['email']">Email est invalide</small>
+                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="Password" class="form-control form-control-user"
+                                        id="exampleInputPassword" placeholder="mot de passe" formControlName="password">
+                                        <div *ngIf="getPassword().touched && getPassword().invalid">
+                                            <small class="text-danger" *ngIf="getPassword().errors?.['required']">le mot de passe est requis</small>
+                                            <small class="text-danger" *ngIf="getPassword().errors?.['minLength']">le mot de passe doit comporter au moins 6 caractères</small>
+                                        </div> 
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user"
+                                        id="exampleRepeatPassword" placeholder="Répéter le mot de passe" formControlName="repeatpassword">
+                                        <div *ngIf="getPassword().touched && getPassword().invalid">
+                                            <small class="text-danger" *ngIf="getPassword().errors?.['required']">le mot de passe est requis</small>
+                                            <small class="text-danger" *ngIf="getPassword().errors?.['minLength']">le mot de passe doit comporter au moins 6 caractères</small>
+                                        </div> 
+                                </div>
+                            </div>
+                            <button  class="btn btn-primary btn-user btn-block" type="submit"> Créer</button>
+                            <hr>
+                            <a href="index.html" class="btn btn-google btn-user btn-block">
+                                <i class="fab fa-google fa-fw"></i> S'inscrire avec Google
+                            </a>
+                            <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                <i class="fab fa-facebook-f fa-fw"></i> S'inscrire avec Facebook
+                            </a>
+                        </form>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

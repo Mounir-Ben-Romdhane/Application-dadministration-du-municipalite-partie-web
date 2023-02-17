@@ -1,0 +1,38 @@
+<p>update-user works!</p>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button class="btn btn-primary my-3" [routerLink]="['/peoplelist']">Back</button>
+        <h6 class="m-0 font-weight-bold text-primary">Update user</h6>
+    </div>
+    <div class="card-body">
+       <form [formGroup]="formGroup" (ngSubmit)="onSubmit1()" >
+           <div class="form-group mb-3">
+            <label for="userEmail">userEmail :</label>
+            <input type="text" class="form-control" formControlName="CIn" name="userEmail" value = "{{ data.userEmail }}" [(ngModel)]="data.userEmail">
+           </div>
+           <div class="form-group mb-3">
+            <label for="userName">userName :</label>
+            <input type="text" class="form-control" formControlName="NAme" name="userName" value = "{{ data.userName }}" [(ngModel)]="data.userName">
+           </div>
+
+           <div class="form-group mb-3">
+            <label for="userNumber">userNumber :</label>
+            <input type="text" class="form-control" formControlName="EMail" name="userNumber" value = "{{ data.userNumber }}" [(ngModel)]="data.userNumber">
+        </div>
+       <div class="form-group mb-3">
+        <label for="userPassword">userPassword :</label> 
+        <input type="text" class="form-control" formControlName="pHone" name="userPassword" value = "{{ data.userPassword }}" [(ngModel)]="data.userPassword">
+
+        </div>
+
+ 
+           <div class="form-group">
+                <button type="submit" class="btn btn-primary" >Update</button>
+            </div>
+
+
+            
+       
+       </form>
+    </div>
+</div>
