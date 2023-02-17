@@ -1,4 +1,4 @@
-# Final
+# Read Me
 
 Mon projet consiste à recevoir et réaliser une application d’administration intelligente
 De ce fait, notre application s’articule autour de deux volets :
